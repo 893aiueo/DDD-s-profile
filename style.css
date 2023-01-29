@@ -1,0 +1,195 @@
+/* style.css */
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/*サイトの背景色*/
+body {
+    background-color: #E77471;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: white;
+    overflow-x: hidden;
+}
+  /* Loading背景画面設定　*/
+  #splash {
+    /*fixedで全面に固定*/
+      position: fixed;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      background:rgb(95, 88, 88);
+      text-align:center;
+      color:#fff;
+  }
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+/*見出し*/
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+/*サブタイトル*/
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;    
+}
+/*ボーダー*/
+hr {
+    border-bottom: 6px dashed white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+img{
+    width: 20%;
+    height: auto;
+}
+
+
+
+/* その場で */
+.fadeIn{
+    animation-name:fadeInAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeInAnime{
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+    
+
+#subtitle-seperator {
+    margin-bottom: 10px;
+}
+
+p{
+    margin:50px 0;
+  }
+  
+  .flex{
+    display: 90px;
+    flex-wrap: wrap;
+  }
+  
+  .box{
+    width: 220px;
+    padding: 20px;
+    margin: 20px 20px 20px;
+    background: #666;
+    color: #fff;
+  }
+
+ /*リンクの形状*/
+#page-top a{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background:#942D2F;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; 
+    text-decoration: none;
+    font-size:0.6rem;
+    transition:all 0.3s;
+  }
+  
+  #page-top a:hover{
+    background: #777;
+  }
+  
+  /*リンクを右下に固定*/
+  #page-top {
+    position: fixed;
+    right: 10px;
+    z-index: 2;
+      /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  
+  /*　上に上がる動き　*/
+  
+  #page-top.UpMove{
+    animation: UpAnime 0.5s forwards;
+  }
+  @keyframes UpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+  /*　下に下がる動き　*/
+  
+  #page-top.DownMove{
+    animation: DownAnime 0.5s forwards;
+  }
+  @keyframes DownAnime{
+    from {
+      opacity: 1;
+    transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(100px);
+    }
+  }
+  /*========= レイアウトのためのCSS ===============*/
+  
+
+  small{
+    color:#fff;
+    display: block;
+    text-align: center;
+  }
+  
+  #header{
+    background:#333;
+    color:#fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  section{
+    padding:100px 30px;
+  }
+  
+  section:nth-child(2n){
+    background:#f3f3f3; 
+  }
+  
+  #footer{
+    background:#333;
+    position: relative;
+    z-index: 2;
+    padding:100px 20px;
+  
+  }
+
